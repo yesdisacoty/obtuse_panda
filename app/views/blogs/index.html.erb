@@ -1,0 +1,35 @@
+<head>
+    
+</head>
+<body>
+  <div class="blog">
+    
+    <div class="jumbotron blog-jumbotron">
+      <div class="container">
+        <br><br><br><h4 class="text-center">Cunning, Inteeligent, Wise.</h4>
+        <h1 class="text-center">Joshua's Blog</h1>
+      </div>
+    </div>
+    <br><br>
+
+
+  <div class="row-fluid">
+    <% @blogs.each do |blog| %>
+    <div class="col-xs-4">
+      <div class="icon">
+        <div class="thumbnail">
+        <img src="https://images.unsplash.com/photo-1440470177828-6381dc5074ba?ixlib=rb-0.3.5&q=80&fm=jpg&s=6faf705d60f9804d03079755fb323a9a"></img>
+        </div>
+        <div class="caption">
+        <h2><%= link_to blog.title, blog%></h2>
+        <p class="date"><%= blog.created_at.strftime("%B, %d, %Y") %></p>
+        <p class="post-body"><%= truncate(blog.body, :length => 150)%></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<% end %>
+</div><!-- END BLOG PAGE BODY DIV -->
+</body>
