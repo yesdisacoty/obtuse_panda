@@ -5,10 +5,42 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  
+      <%= yield %>
+  
+      <div class="button_container" id="toggle">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </div>
+    
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Portfolio', videos_path %></li>
+          <li><%= link_to 'Blog', blogs_path %></li>
+          <li><%= link_to 'Contact', new_contact_path %></li>
+        </ul>
+      </nav>
+    </div>
 
-<%= yield %>
 
+ 
+
+
+
+
+
+
+
+<script src="jquery.js"></script>
+<script src="jquery.boxloader.min.js"></script>
+<script src="custom.js"></script>
 </body>
 </html>
