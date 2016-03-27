@@ -38,6 +38,20 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 
+/*Components*/
+.thumbnail{
+    color: #000;    
+}
+
+.thumbnail:hover{
+    border: #33E220;
+}
+
+.thumbnail > a:hover{
+    color: #33E220;
+}
+
+
 /*
 Video Background on Homepage
 */
@@ -82,9 +96,6 @@ Video Background on Homepage
 .video-container video.fillWidth {
     width: 100%;
 }
-/*
-End Video Background
-*/
 
 video#bgvid { 
     position: fixed;
@@ -102,6 +113,18 @@ video#bgvid {
     background: url(polina.jpg) no-repeat;
     background-size: cover; 
 }
+
+.video-overlay{
+    text-align: center;
+    z-index:100;
+    color: #33E220;
+    position: relative;
+    float: center;
+}
+
+/*
+End Video Background
+*/
 
 .navbar-brand{
   margin-top: -5px;
@@ -136,25 +159,28 @@ video#bgvid {
 
 /*ABOUT PAGE*/
 body .about{
-    background-color: #000000;
+    background: url(http://res.cloudinary.com/lptbt4ovx/image/upload/c_scale,w_1655/v1458972212/space-desk-workspace-coworking_jtrp2j.jpg);
     background-position: relative;
     background-size: cover;
     min-height: 100%;
     background-attachment: fixed;
     overflow: hidden;
-    -webkit-filter: grayscale(75%); /* Chrome, Safari, Opera */
-    filter: grayscale(75%);
+    -webkit-filter: grayscale(95%); /* Chrome, Safari, Opera */
+    filter: grayscale(95%);
 }
 
 #about-background{
-    opacity: 0.7;
     background-position: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.9;
 }
 
 .about-header-text{
     color: #010101;
     text-align:center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', cursive, bold;
     size:large;
     -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
     filter: grayscale(0%);
@@ -164,7 +190,30 @@ body .about{
     color: #010101;
     text-align: justify;
     margin: 0 auto;
-    width: 25em;
+    width: 55em;
+}
+
+#meet-the-cupboard{
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+}
+
+#team-pics{
+    background-color: #000;
+    padding: 5px;
+}
+
+.team-photo{
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 1.0;
+}
+
+#bio{
+    text-align: center;
 }
 
 /*BLOG INDEX PAGE*/
@@ -229,15 +278,21 @@ body .blog{
   margin: 2px;
 }
 
+/*CONTACT PAGE*/
 .submit-btn{
   border: none;
-  background-color: #252525;
-  text-color: #FF9233;
+  background-color: #FFF;
+  color: #000;
   height: 5em;
+  padding: 5px 20px 5px 20px;
 }
 
-.contact-body{
-  background-color: #868686;
+// .contact-body{
+//   height: cover;
+//   width: 100%;
+// }
+.form-group{
+    padding: 5px 20px 5px 20px;
 }
 
 .comments-area{
@@ -247,5 +302,37 @@ body .blog{
 
 .form-control{
   border: 0px, 0px, 10px, 0px;
-  background-color: #868686;
 }
+
+.form-label{
+    color: #FFF;
+}
+
+.contact-left{
+   background: url(http://res.cloudinary.com/lptbt4ovx/image/upload/c_fill,h_704,w_818/v1458931905/contact_photo-compressor_wzcrin.jpg);
+   width: 50%;
+   position: absolute;
+   left: 0px;
+   height: 100%;
+}
+
+.contact-right{
+   background: #000;
+   width: 50%;
+   position: absolute;
+   right: 0px;
+   height: 100%;
+}
+
+#contact-header{
+    color: #fff;
+}
+
+#contact-body{
+    color: #fff;
+}
+
+.contact-text{
+    margin: 5px;
+}
+

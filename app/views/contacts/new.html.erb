@@ -3,32 +3,39 @@
     
 </head>
 <body class="contact-body">
-
-    <div class="row">
-      <br><br><br><br><br><br><br><div class="col-md-4 col-md-offset-7">
-        
+  
+    <div class="contact-left"></div>
+    <div class="contact-right">
+      <br><br>
+      <div class="contact-text">
+      <h3 id="contact-header">Want to work with us?</h3>
+      <p id="contact-body">The key to more success is to have a lot of pillows. It’s important to use cocoa butter. 
+      It’s the key to more success, why not live smooth? Why live rough? I’m giving you cloth talk, cloth. 
+      Special cloth alert, cut from a special cloth. The first of the month is coming, we have to get money, we have no choice</p>
+      </div><!-- END TEXT DIV-->
+      <br>
           <%= form_for @contact do |f| %>
             <div class="form-group">
-              <%= f.label :name, class: 'quicksand' %>
+              <%= f.label :name, class: 'quicksand form-label' %>
               <%= f.text_field :name, class: 'form-control' %>
             </div>
             <br>
             <div class="form-group">
-              <%= f.label :email, class: 'quicksand' %>
+              <%= f.label :email, class: 'quicksand form-label' %>
               <%= f.email_field :email, class: 'form-control' %>
             </div>
             <br>
             <div class="form-group">
-              <%= f.label :comments, class: 'quicksand' %>
+              <%= f.label :comments, class: 'quicksand form-label' %>
          
               <%= f.text_area :comments, class: 'form-control comments-area' %>
              
             </div>
-            <%= f.submit 'Send this to Josh', class: 'btn btn-primary submit-btn quicksand' %>
-          <% end %>
-        
-      </div>
+            <%= f.submit 'Send it', class: 'btn btn-primary submit-btn quicksand align-right' %>
+          <% end %>      
+    <div class="row contact-area">
     </div>
-
+    </div>
+    </div><!--End Contact-Right-->
 </body>
 </html>
