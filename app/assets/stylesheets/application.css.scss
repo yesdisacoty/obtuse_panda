@@ -17,3 +17,374 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+ 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+
+/*Components*/
+.thumbnail{
+    color: #000;    
+}
+
+.thumbnail:hover{
+    border: #33E220;
+}
+
+.thumbnail > a:hover{
+    color: #33E220;
+}
+
+/*TYPED JS ON HOME PAGE*/
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+/*
+Video Background on Homepage
+*/
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+.video-overlay{
+    text-align: center;
+    z-index:100;
+    color: #00b300;
+    position: relative;
+    float: center;
+}
+
+@media screen and (max-device-width: 800px) {
+    .homepage-hero-module {
+         background: url(http://res.cloudinary.com/lptbt4ovx/image/upload/v1458508304/NYC-Traffic_zlvn0k.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}
+
+/*
+End Video Background
+*/
+
+.navbar-brand{
+  margin-top: -5px;
+}
+
+.navbar-default{
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000000;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color: #33E220;
+}
+
+.quicksand{
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+
+.header-container h3{
+    z-index:1;
+    font-family:"Times New Roman";
+    color:#6FA1A2;
+    margin-top:20%;
+    text-align:center;
+}
+
+/*ABOUT PAGE*/
+body .about{
+    background: url(http://res.cloudinary.com/lptbt4ovx/image/upload/c_scale,w_1655/v1458972212/space-desk-workspace-coworking_jtrp2j.jpg);
+    background-position: relative;
+    background-size: cover;
+    min-height: 100%;
+    background-attachment: fixed;
+    overflow: hidden;
+    -webkit-filter: grayscale(95%); /* Chrome, Safari, Opera */
+    filter: grayscale(95%);
+}
+
+#about-background{
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
+.about-header-text{
+    color: #010101;
+    text-align:center;
+    font-family: 'Pacifico', cursive, bold;
+    size:large;
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+}
+
+.about-body-text{
+    color: #010101;
+    text-align: justify;
+    margin: 0 auto;
+    width: 55em;
+}
+
+#meet-the-cupboard{
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+}
+
+#team-pics{
+    background-color: #000;
+    padding: 5px;
+}
+
+.team-photo{
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 1.0;
+}
+
+#bio{
+    text-align: center;
+}
+
+/*BLOG INDEX PAGE*/
+
+body .blog{
+    background-color: #ffffff;
+    background-attachment:fixed;
+    background-position:relative;
+}
+
+.blog-jumbotron{
+    background-image: url(http://res.cloudinary.com/lptbt4ovx/image/upload/c_scale,w_1260/v1459221582/panda_blog_header-compressor_iikwdw.jpg);
+    min-height: 700px;
+    width: 100%;
+   
+}
+
+.blog-posts{
+    text-align: center;
+}
+
+.blog-post{
+    text-align: center;
+}
+
+.portfolio-jumbotron{
+    background-image: url(http://res.cloudinary.com/lptbt4ovx/image/upload/v1446323215/cool-stars-compressor_oktjku.jpg);
+    min-height: 550px;
+    
+}
+
+.jumbotron-title{
+    color: #ffffff;
+    font-family: 'QuickSand', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: -3px;
+}
+
+.jumbotron h4{
+  font-family: 'QuickSand';
+  color: #FF9233;
+}
+
+.jumbotron p{
+    color: #ffffff;
+}
+
+.thumnbnail {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+.caption {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caption p {
+  font-size: 15px;
+  margin: 0px;
+}
+
+.caption h2 {
+  font-size: 17px;
+  margin: 2px;
+}
+
+#blog-header-text{
+    color: #fff;
+}
+
+#blog-subtext{
+    color: #33E220;
+}
+
+/*CONTACT PAGE*/
+.submit-btn{
+  border: none;
+  background-color: #FFF;
+  color: #000;
+  height: 5em;
+  padding: 5px 20px 5px 20px;
+}
+
+// .contact-body{
+//   height: cover;
+//   width: 100%;
+// }
+.form-group{
+    padding: 5px 20px 5px 20px;
+}
+
+.comments-area{
+  height: 40em;
+
+}
+
+.submit-btn{
+    margin: 0px 0px 0px 20px;
+}
+
+.form-control{
+  border: 0px, 0px, 10px, 0px;
+}
+
+.form-label{
+    color: #FFF;
+}
+
+.contact-left{
+   background: url(http://res.cloudinary.com/lptbt4ovx/image/upload/c_fill,h_704,w_818/v1458931905/contact_photo-compressor_wzcrin.jpg);
+   width: 50%;
+   position: absolute;
+   left: 0px;
+   height: 100%;
+}
+
+.contact-right{
+   background: #000;
+   width: 50%;
+   position: absolute;
+   right: 0px;
+   height: 100%;
+}
+
+#contact-header{
+    color: #fff;
+}
+
+#contact-body{
+    color: #fff;
+}
+
+.contact-text{
+    margin: 5px 20px 5px 20px;
+}
+
