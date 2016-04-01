@@ -140,9 +140,18 @@ video#bgvid {
 .video-overlay{
     text-align: center;
     z-index:100;
-    color: #33E220;
+    color: #00b300;
     position: relative;
     float: center;
+}
+
+@media screen and (max-device-width: 800px) {
+    .homepage-hero-module {
+         background: url(http://res.cloudinary.com/lptbt4ovx/image/upload/v1458508304/NYC-Traffic_zlvn0k.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
 }
 
 /*
@@ -248,10 +257,18 @@ body .blog{
 }
 
 .blog-jumbotron{
-    background-image: url(http://res.cloudinary.com/lptbt4ovx/image/upload/v1446527458/CloudCity-compressor_har8mw.jpg);
+    background-image: url(http://res.cloudinary.com/lptbt4ovx/image/upload/c_scale,w_1260/v1459221582/panda_blog_header-compressor_iikwdw.jpg);
     min-height: 700px;
-    
+    width: 100%;
    
+}
+
+.blog-posts{
+    text-align: center;
+}
+
+.blog-post{
+    text-align: center;
 }
 
 .portfolio-jumbotron{
@@ -299,6 +316,14 @@ body .blog{
 .caption h2 {
   font-size: 17px;
   margin: 2px;
+}
+
+#blog-header-text{
+    color: #fff;
+}
+
+#blog-subtext{
+    color: #33E220;
 }
 
 /*CONTACT PAGE*/
