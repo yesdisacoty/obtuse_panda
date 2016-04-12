@@ -1,18 +1,19 @@
+<div class="jumbotron blog-post-jumbotron" style="background-image: url(<%= @blog.blog_photo.url(:header) %>)">
+    <!--<%= image_tag @blog.blog_photo.url(:header) %>-->
+    <h1 class="jumbotron-title">
+        <%= @blog.title %>
+    </h1>
+</div>
 <div class="blog-post col-xs-offset-3 col-xs-6">
-<h1 class="title">
-    <%= @blog.title %>
-</h1>
-<h4>Author</h4>
-
-<br><br>
-
-<p class="date">
-    Artfully crafted <%= time_ago_in_words(@blog.created_at) %> ago
-    | <%= link_to "Edit", edit_blog_path(@blog) %>
-    | <%= link_to "Delete", blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' } %>
-</p>
-<br><br>
-<p class="body">
-    <%= @blog.body %>
-</p>
+    <h4>Author</h4>
+    <br><br>
+    <p class="date">
+        Artfully crafted <%= time_ago_in_words(@blog.created_at) %> ago
+        | <%= link_to "Edit", edit_blog_path(@blog) %>
+        | <%= link_to "Delete", blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+    <br><br>
+    <p class="body">
+        <%= @blog.body %>
+    </p>
 </div>

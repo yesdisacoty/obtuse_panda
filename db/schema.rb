@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317045446) do
+ActiveRecord::Schema.define(version: 20160408162548) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "blog_photo_file_name"
+    t.string   "blog_photo_content_type"
+    t.integer  "blog_photo_file_size"
+    t.datetime "blog_photo_updated_at"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -33,6 +37,18 @@ ActiveRecord::Schema.define(version: 20160317045446) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "link"
+    t.string   "title"
+    t.string   "author"
+    t.string   "duration"
+    t.integer  "likes"
+    t.integer  "dislikes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "uid"
   end
 
 end

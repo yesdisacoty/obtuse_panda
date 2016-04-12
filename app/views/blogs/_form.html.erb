@@ -1,4 +1,7 @@
-<%= form_for @blog do |f| %>
+<%= form_for @blog, html: {multipart: true} do |f| %>
+
+    <p><%= f.label :photo %></p>
+    <p><%= f.file_field :blog_photo %></p>
     
     <p><%= f.label :title %></p>
     <p><%= f.text_field :title %></p>

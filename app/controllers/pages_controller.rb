@@ -6,4 +6,10 @@ class PagesController < ApplicationController
     def about
     end
     
+    def portfolio
+    end
+    
+    def scenic_weather
+    end
+    
 end

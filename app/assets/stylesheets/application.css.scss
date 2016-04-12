@@ -37,6 +37,10 @@
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@font-face{
+    font-family: 'Gotham';
+    src: url('/stylesheets/fwdgothamfonts/Gotham-Black');
+}
 
 /*Components*/
 .thumbnail{
@@ -158,6 +162,8 @@ video#bgvid {
 End Video Background
 */
 
+
+/* NAVBAR */
 .navbar-brand{
   margin-top: -5px;
 }
@@ -174,13 +180,7 @@ End Video Background
 .navbar-default .navbar-nav > li > a:hover{
   color: #33E220;
 }
-
-.quicksand{
-  font-family: 'Quicksand', sans-serif;
-}
-
-
-
+/* END NAVBAR */
 .header-container h3{
     z-index:1;
     font-family:"Times New Roman";
@@ -209,13 +209,18 @@ body .about{
     opacity: 0.9;
 }
 
-.about-header-text{
-    color: #010101;
+.about-header{
+    color: #000;
     text-align:center;
-    font-family: 'Pacifico', cursive, bold;
+    font-family: 'Gotham';
     size:large;
     -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
     filter: grayscale(0%);
+}
+
+.about-subheader{
+    color: #33e220;
+    text-align: center;
 }
 
 .about-body-text{
@@ -260,24 +265,38 @@ body .blog{
     background-image: url(http://res.cloudinary.com/lptbt4ovx/image/upload/c_scale,w_1260/v1459221582/panda_blog_header-compressor_iikwdw.jpg);
     min-height: 700px;
     width: 100%;
-   
+}
+
+.blog-post-jumbotron{
+    min-height: 600px;
+    width: 100%;
+    background-size: cover;
 }
 
 .blog-posts{
     text-align: center;
 }
 
+.thumbnail{
+    border: none;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
 .blog-post{
     text-align: center;
 }
 
+
+
 .portfolio-jumbotron{
     background-image: url(http://res.cloudinary.com/lptbt4ovx/image/upload/v1446323215/cool-stars-compressor_oktjku.jpg);
-    min-height: 550px;
-    
+    min-height: 700px;
 }
 
-.jumbotron-title{
+.jumbotron-header{
     color: #ffffff;
     font-family: 'QuickSand', sans-serif;
     font-weight: 400;
@@ -286,9 +305,31 @@ body .blog{
     letter-spacing: -3px;
 }
 
-.jumbotron h4{
-  font-family: 'QuickSand';
-  color: #FF9233;
+.nav-pills{
+    display: inline-block;
+}
+
+.nav-pills>li>a {
+  background-color: transparent; 
+  border-color: #ffffff;
+  color:#fff;
+}
+
+.nav-pills>li>a:hover {
+  background-color: #33E220; 
+  border-color: #ffffff;
+  color:#fff;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    color: #33E220;
+    background-color: transparent;
+    border: white;
+}
+
+.nav-pills > li.active > a:hover {
+    background-color: #33E220;
+    color:white;
 }
 
 .jumbotron p{
@@ -318,12 +359,9 @@ body .blog{
   margin: 2px;
 }
 
-#blog-header-text{
-    color: #fff;
-}
-
-#blog-subtext{
+.jumbotron-subheader{
     color: #33E220;
+    text-align: center;
 }
 
 /*CONTACT PAGE*/
@@ -335,10 +373,6 @@ body .blog{
   padding: 5px 20px 5px 20px;
 }
 
-// .contact-body{
-//   height: cover;
-//   width: 100%;
-// }
 .form-group{
     padding: 5px 20px 5px 20px;
 }
@@ -388,3 +422,77 @@ body .blog{
     margin: 5px 20px 5px 20px;
 }
 
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* IMAGE OVERLAYS*/
+
+.view {
+   width: 50%;
+   height: 280px;
+   margin: 0px;
+   float: left;
+   border: 0px;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 0px 0px 0px #aaa;
+   cursor: default;
+}
+
+.view .mask, .view .content {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+
+.view img {
+   display: block;
+   position: relative;
+}
+
+.view a{
+    color: #000;
+}
+
+.view a.info {
+   background: center no-repeat;
+   display: inline-block;
+   text-decoration: none;
+   padding:0;
+   text-indent:-9999px;
+   width:20px;
+   height:20px;
+   color: #000;
+}
+
+/*-----------------------------------------*/
+
+.second-effect .mask {
+   opacity: 0;
+   overflow:visible;
+   border:0px solid rgba(0,0,0,0.7);
+   box-sizing:border-box;
+   transition: all 0.4s ease-in-out;
+}
+
+.second-effect a.info {
+   position:relative;
+   top:-10px;
+   opacity:0;
+   transform:scale(0,0);
+   transition: transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out;
+}
+
+.second-effect:hover .mask {
+   opacity: 1;
+   border:100px solid rgba(0,0,0,0.7);
+}
+
+.second-effect:hover a.info {
+   opacity:1;
+   transform:scale(1,1);
+   transition-delay:0.3s;
+}
